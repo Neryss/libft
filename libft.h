@@ -6,17 +6,50 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/23 17:28:01 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2020/11/24 17:39:54 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
+# include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
+
+char				*ft_strchr(const char *s, int c);
+char				*ft_strrchr(const char *s, int c);
+char				*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char				*ft_strdup(const char *s1);
+char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strcat(char *dest, char *src);
+
+void				*ft_calloc(size_t count, size_t size);
 void				*ft_memset(void *str, int c, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
-void				*memmove(void *dst, const void *src, size_t len);
+void				*ft_memmove(void *dst, const void *src, size_t len);
+void				*ft_memchr(const void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
+void				ft_putchar_fd(char c, int fd);
+void				ft_putstr_fd(char *s, int fd);
+void				ft_putendl_fd(char *s, int fd);
+void				ft_putnbr_fd(int n, int fd);
+
+int					check_white_spaces(char *str, int i);
+int					ft_memcmp(const void *s1, const void *s2, size_t n);
+int					ft_strncmp(const char *s1, const char *s2, size_t n);
+int					ft_isalpha(int c);
+int					ft_isdigit(int c);
+int					ft_isalnum(int c);
+int					ft_isascii(int c);
+int					ft_isprint(int c);
+int					ft_toupper(int c);
+int					ft_tolower(int c);
+int					ft_atoi(const char *str);
+
+size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t				ft_strlen(const char *s);
+size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 #endif
