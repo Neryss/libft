@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/24 17:39:54 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2020/11/25 15:54:11 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,20 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+//DELETE
+# include <stdio.h>
 
+char				**ft_split(char const *s, char c);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char				*ft_strdup(const char *s1);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strcat(char *dest, char *src);
+char				*ft_substr(char const *s, unsigned int start, size_t len);
+char				*ft_strtrim(char const *s1, char const *set);
+char				*ft_itoa(int n);
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void				*ft_calloc(size_t count, size_t size);
 void				*ft_memset(void *str, int c, size_t len);

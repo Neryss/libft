@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2020/11/24 17:40:09 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2020/11/25 15:54:25 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,11 @@ SRCS = ft_memset.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		
+		ft_split.c \
+		ft_substr.c \
+		ft_strtrim.c\
+		ft_itoa.c \
+		ft_strmapi.c \
 		
 OBJS = $(SRCS:.c=.o)
 
