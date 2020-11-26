@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 14:38:48 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/24 10:26:45 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2020/11/26 14:16:52 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	bdest = dst;
 	bsrc = src;
+	if (!dst && !src)
+		return (NULL);
 	while (n--)
 		*bdest++ = *bsrc++;
 	return (dst);

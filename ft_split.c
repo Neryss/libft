@@ -6,17 +6,17 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 08:53:38 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/25 10:12:22 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2020/11/25 16:35:53 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		count_words(char *str, char c)
+static int		count_words(char *str, char c)
 {
-	int i;
-	int words;
-	int check;
+	int			i;
+	int			words;
+	int			check;
 
 	i = 0;
 	words = 0;
@@ -35,9 +35,9 @@ int		count_words(char *str, char c)
 	return (words);
 }
 
-int		get_word_length(char *str, char c, int i)
+static int		get_word_length(char *str, char c, int i)
 {
-	int	len;
+	int			len;
 
 	len = 0;
 	while (str[i] && str[i] != c)
@@ -48,13 +48,13 @@ int		get_word_length(char *str, char c, int i)
 	return (len);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
-	int		wcount;
-	int		i;
-	int		j;
-	int		k;
-	char	**tab;
+	int			wcount;
+	int			i;
+	int			j;
+	int			k;
+	char		**tab;
 
 	i = 0;
 	k = 0;

@@ -6,15 +6,14 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2020/11/25 15:54:25 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2020/11/26 13:35:32 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 INCS = libft.h
-LIBC = ar rc
-LIBI = ranlib
+LIBC = ar rcs
 NAME = libft.a
 SRCS = ft_memset.c \
 		ft_bzero.c \
@@ -50,8 +49,19 @@ SRCS = ft_memset.c \
 		ft_strtrim.c\
 		ft_itoa.c \
 		ft_strmapi.c \
-		
+		ft_check_whitespaces.c \
+		ft_strcat.c 
+BONUS_SRC = ft_lstnew_bonus.c \
+		ft_lstadd_front_bonus.c \
+		ft_lstsize_bonus.c \
+		ft_lstlast_bonus.c \
+		ft_lstadd_back_bonus.c \
+		ft_lstdelone_bonus.c \
+		ft_lstiter_bonus.c \
+		ft_lstmap_bonus.c \
+		ft_lstclear_bonus.c
 OBJS = $(SRCS:.c=.o)
+BONUS_OBJS = $(BONUS_SRC:.c=.o)
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I$(INCS)
@@ -60,12 +70,14 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(LIBC) $(NAME) $(OBJS)
-	$(LIBI) $(NAME)
+
+bonus: $(NAME) $(BONUS_OBJS)
+	$(LIBC) $(NAME) $(BONUS_OBJS)
 
 re: fclean all
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
 	rm -f $(NAME)

@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 14:48:30 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/24 14:58:26 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2020/11/26 13:09:49 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_isalpha(int c)
 {
-	if (((char)c >= 'A' && (char)c <= 'Z') ||
-		((char)c >= 'a' && (char)c <= 'z'))
+	if ((c >= 'A' && c <= 'Z') ||
+		(c >= 'a' && c <= 'z'))
 		return (1);
 	else
 		return (0);

@@ -6,19 +6,11 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 15:02:55 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/25 14:54:00 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2020/11/25 16:21:05 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int			check_white_spaces(char *str, int i)
-{
-	while (str[i] == '\r' || str[i] == '\v' || str[i] == '\t'
-			|| str[i] == '\f' || str[i] == '\n' || str[i] == ' ')
-		i++;
-	return (i);
-}
 
 static int	calcul_res(int res, int neg, int pos)
 {
