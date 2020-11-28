@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
+/*   By: ckurt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 08:53:38 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/27 10:12:26 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2020/11/28 14:29:59 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char			**ft_split(char const *s, char c)
 			i++;
 		if (!(tab[k] = (char *)malloc(sizeof(char) *
 			(get_word_length((char *)s, c, i) + 1))))
-			return (ft_freeall(tab));
+			return (ft_freeall(tab, k));
 		while (s[i] != c && s[i])
 			tab[k][j++] = s[i++];
 		tab[k++][j] = '\0';

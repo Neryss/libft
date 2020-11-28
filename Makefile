@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2020/11/27 10:04:27 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2020/11/28 15:07:34 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,9 @@ SRCS = ft_memset.c \
 		ft_itoa.c \
 		ft_strmapi.c \
 		ft_check_whitespaces.c \
-		ft_strcat.c 
+		ft_strcat.c \
+		ft_freeall.c \
+		ft_split_charset.c
 BONUS_SRC = ft_lstnew_bonus.c \
 		ft_lstadd_front_bonus.c \
 		ft_lstsize_bonus.c \
