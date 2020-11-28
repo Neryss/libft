@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/28 16:18:10 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2020/11/28 16:33:13 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strnstr(const char *haystack,
 const char *needle, size_t len);
 char				*ft_strcat(char *dest, char *src);
+char				*ft_strncat(char *dest, char *src, unsigned int nb);
 char				*ft_strdup(const char *s1);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
@@ -45,9 +46,13 @@ char				*ft_itoa(int n);
 void				*ft_calloc(size_t count, size_t size);
 void				*ft_freeall(char **tab, int size);
 void				ft_putchar_fd(char c, int fd);
+void				ft_putchar(char c);
 void				ft_putstr_fd(char *s, int fd);
+void				ft_putstr(char *s);
 void				ft_putendl_fd(char *s, int fd);
+void				ft_putendl(char *s);
 void				ft_putnbr_fd(int n, int fd);
+void				ft_putnbr(int n);
 void				ft_bzero(void *s, size_t n);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstadd_back(t_list **lst, t_list *new);

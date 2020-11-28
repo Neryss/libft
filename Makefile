@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2020/11/28 16:18:26 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2020/11/28 16:33:29 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,9 +41,13 @@ SRCS = ft_memset.c \
 		ft_calloc.c \
 		ft_strjoin.c \
 		ft_putchar_fd.c \
+		ft_putchar.c \
 		ft_putstr_fd.c \
+		ft_putstr.c \
 		ft_putendl_fd.c \
+		ft_putendl.c \
 		ft_putnbr_fd.c \
+		ft_putnbr.c \
 		ft_split.c \
 		ft_substr.c \
 		ft_strtrim.c\
@@ -53,7 +57,9 @@ SRCS = ft_memset.c \
 		ft_strcat.c \
 		ft_freeall.c \
 		ft_split_charset.c \
-		ft_foreach.c
+		ft_foreach.c \
+		ft_strncat.c \
+		
 BONUS_SRC = ft_lstnew_bonus.c \
 		ft_lstadd_front_bonus.c \
 		ft_lstsize_bonus.c \

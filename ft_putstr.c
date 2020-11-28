@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_foreach.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/28 16:16:54 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/28 16:30:36 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2020/11/28 16:22:19 by ckurt             #+#    #+#             */
+/*   Updated: 2020/11/28 16:24:33 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_foreach(int *tab, int length, void (*f)(int))
-{
-	int		i;
+#include "libft.h"
 
-	i = -1;
-	while (++i < length)
-		(*f)(tab[i]);
+void	ft_putstr(char *s)
+{
+	write(1, s, ft_strlen(s));
 }

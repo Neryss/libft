@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_foreach.c                                       :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/28 16:16:54 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/28 16:30:36 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2020/11/28 16:25:03 by ckurt             #+#    #+#             */
+/*   Updated: 2020/11/28 16:25:44 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-void		ft_foreach(int *tab, int length, void (*f)(int))
-{
-	int		i;
+#include "libft.h"
 
-	i = -1;
-	while (++i < length)
-		(*f)(tab[i]);
+void	ft_putendl(char *s)
+{
+	ft_putstr(s);
+	ft_putchar('\n');
 }
