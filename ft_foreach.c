@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 14:30:55 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/28 21:00:28 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2020/11/28 16:16:54 by ckurt             #+#    #+#             */
+/*   Updated: 2020/11/28 16:30:36 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalnum(int c)
+void		ft_foreach(int *tab, int length, void (*f)(int))
 {
-	if ((c >= '0' && c <= '9') || ft_isalpha(c))
-		return (1);
-	else
-		return (0);
+	int		i;
+
+	i = -1;
+	while (++i < length)
+		(*f)(tab[i]);
 }

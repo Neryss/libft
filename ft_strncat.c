@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/24 14:30:55 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/28 21:00:28 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2020/11/28 16:21:04 by ckurt             #+#    #+#             */
+/*   Updated: 2020/11/28 16:21:35 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_isalnum(int c)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	if ((c >= '0' && c <= '9') || ft_isalpha(c))
-		return (1);
-	else
-		return (0);
+	unsigned int i;
+	unsigned int j;
+
+	i = 0;
+	j = 0;
+	while (dest[i])
+		i++;
+	while (src[j] && j < nb)
+		dest[i++] = src[j++];
+	dest[i] = '\0';
+	return (dest);
 }

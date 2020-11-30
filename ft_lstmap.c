@@ -6,7 +6,11 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 10:45:33 by ckurt             #+#    #+#             */
+<<<<<<< HEAD:ft_lstmap.c
 /*   Updated: 2020/11/30 17:44:24 by ckurt            ###   ########lyon.fr   */
+=======
+/*   Updated: 2020/11/28 20:52:24 by ckurt            ###   ########lyon.fr   */
+>>>>>>> 4f87a64ccbfd1daafb917b1a6b02de588837bbf1:ft_lstmap_bonus.c
 /*                                                                            */
 /* ************************************************************************** */
 
