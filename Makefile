@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2020/11/30 19:15:23 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2020/12/03 09:15:57 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,7 @@ SRCS = ft_memset.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_lstclear.c \
-		ft_freeal.c
+		ft_freeall.c
 OBJS = $(SRCS:.c=.o)
 
 .c.o:
