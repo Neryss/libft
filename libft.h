@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/28 16:33:13 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2020/12/03 11:07:34 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char				**ft_split(char const *s, char c);
 char				**ft_split_charset(char *str, char *charset);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
-char				*ft_strnstr(const char *haystack,
+char				*ft_strnstr(const char *haystack, 
 const char *needle, size_t len);
 char				*ft_strcat(char *dest, char *src);
 char				*ft_strncat(char *dest, char *src, unsigned int nb);
