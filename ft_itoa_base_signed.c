@@ -1,55 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_base_signed.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/25 14:50:40 by ckurt             #+#    #+#             */
-/*   Updated: 2020/12/21 13:57:15 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2020/12/22 12:02:05 by ckurt             #+#    #+#             */
+/*   Updated: 2020/12/22 16:58:33 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_itoa_getsize(int n)
+static	int	ft_itoa_getsize_base(long long n, int base_len)
 {
-	int			count;
+	int		count;
 
 	count = 0;
-	if (n < 0)
-		n *= -1;
 	while (n)
 	{
-		n /= 10;
+		n /= base_len;
 		count++;
 	}
 	return (count);
 }
 
-char			*ft_itoa(int n)
+char		*ft_itoa_base_signed(long long n, char *base)
 {
-	char		*res;
-	int			count;
-	int			i;
-	long int	tmp;
+	int		count;
+	int		base_len;
+	char	*res;
 
-	tmp = n;
-	count = ft_itoa_getsize(n);
-	if (tmp < 0 || count == 0)
-		count++;
+	base_len = ft_strlen(base);
+	count = ft_itoa_getsize_base(n, base_len);
 	if (!(res = ft_calloc(count + 1, sizeof(char))))
 		return (NULL);
-	i = 0;
-	if (tmp < 0)
+	while (count > 0)
 	{
-		tmp *= -1;
-		res[i++] = '-';
-	}
-	while (count > i)
-	{
-		res[--count] = (tmp % 10) + '0';
-		tmp /= 10;
+		res[--count] = base[n % base_len];
+		n /= base_len;
 	}
 	return (res);
 }

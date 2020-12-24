@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putstrl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/28 16:22:19 by ckurt             #+#    #+#             */
-/*   Updated: 2020/12/16 13:41:01 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2020/12/19 16:06:25 by ckurt             #+#    #+#             */
+/*   Updated: 2020/12/23 14:06:57 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstr(char *s)
+int	ft_putstrl(char *str, int len)
 {
-	return (write(1, s, ft_strlen(s)));
+	int i;
+
+	i = 0;
+	while (str[i] && i < len)
+		write(1, &str[i++], 1);
+	return (i);
 }

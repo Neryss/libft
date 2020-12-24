@@ -6,9 +6,31 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2020/12/03 09:15:57 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2020/12/22 12:03:26 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
+
+_END=\033[0m
+_BOLD=\033[1m
+_UNDER=\033[4m
+_REV=\033[7m
+
+_RED=\033[31m
+_GREEN=\033[32m
+_YELLOW=\033[33m
+_BLUE=\033[34m
+_PURPLE=\033[35m
+_CYAN=\033[36m
+_WHITE=\033[37m
+
+_IGREY=\033[40m
+_IRED=\033[41m
+_IGREEN=\033[42m
+_IYELLOW=\033[43m
+_IBLUE=\033[44m
+_IPURPLE=\033[45m
+_ICYAN=\033[46m
+_IWHITE=\033[47m
 
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
@@ -25,6 +47,7 @@ SRCS = ft_memset.c \
 		ft_strlen.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
+		ft_strncat.c \
 		ft_strchr.c \
 		ft_strrchr.c \
 		ft_strnstr.c \
@@ -38,12 +61,14 @@ SRCS = ft_memset.c \
 		ft_tolower.c \
 		ft_atoi.c \
 		ft_strdup.c \
+		ft_strndup.c \
 		ft_calloc.c \
 		ft_strjoin.c \
 		ft_putchar_fd.c \
 		ft_putchar.c \
 		ft_putstr_fd.c \
 		ft_putstr.c \
+		ft_putstrl.c \
 		ft_putendl_fd.c \
 		ft_putendl.c \
 		ft_putnbr_fd.c \
@@ -52,6 +77,7 @@ SRCS = ft_memset.c \
 		ft_substr.c \
 		ft_strtrim.c\
 		ft_itoa.c \
+		ft_itoa_base.c \
 		ft_strmapi.c \
 		ft_check_whitespaces.c \
 		ft_strcat.c \
@@ -64,23 +90,36 @@ SRCS = ft_memset.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_lstclear.c \
-		ft_freeall.c
+		ft_foreach.c \
+		ft_freeall.c \
+		ft_isalnum.c \
+		ft_split_charset.c \
+		ft_convert_base1.c \
+		ft_convert_base2.c \
+		ft_putnbr_base.c \
+		ft_atoi_base.c \
+		ft_ischarset.c \
+		ft_itoa_base_signed.c \
+		ft_nblen.c
 OBJS = $(SRCS:.c=.o)
 
 .c.o:
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I$(INCS)
+	@printf "$(_CYAN) [+] $(_END) Compiling $(_BLUE)owo $(_END)$<\n" | tr "lr" "w"
+	@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) 
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(LIBC) $(NAME) $(OBJS)
+	@$(LIBC) $(NAME) $(OBJS)
+	@printf " $(_GREEN)=>$(_END) Fwinished uwu!\n"
 
-re: fclean all
+re: fclean
+	@$(MAKE) all
 
 clean:
-	rm -f $(OBJS)
+	@rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 .PHONY: clean fclean re all

@@ -1,55 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/25 14:50:40 by ckurt             #+#    #+#             */
-/*   Updated: 2020/12/21 13:57:15 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2020/12/15 17:28:38 by ckurt             #+#    #+#             */
+/*   Updated: 2020/12/15 17:40:11 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_itoa_getsize(int n)
+char			*ft_putnbr_base(int nb, char *base)
 {
-	int			count;
-
-	count = 0;
-	if (n < 0)
-		n *= -1;
-	while (n)
-	{
-		n /= 10;
-		count++;
-	}
-	return (count);
-}
-
-char			*ft_itoa(int n)
-{
-	char		*res;
-	int			count;
+	long		n;
 	int			i;
-	long int	tmp;
+	int			base_len;
+	char		*res;
 
-	tmp = n;
-	count = ft_itoa_getsize(n);
-	if (tmp < 0 || count == 0)
-		count++;
-	if (!(res = ft_calloc(count + 1, sizeof(char))))
-		return (NULL);
+	res = malloc(2096 * sizeof(char));
+	n = nb;
+	nb = (n < 0 ? -1 : 1);
+	n *= nb;
 	i = 0;
-	if (tmp < 0)
-	{
-		tmp *= -1;
+	base_len = ft_strlen(base);
+	while (base[base_len])
+		base_len++;
+	if (ft_check_base(base) && base_len > 1)
+		while (n || i == 0)
+		{
+			res[i++] = base[n % base_len];
+			n = n / base_len;
+			res[i] = '\0';
+		}
+	if (nb < 0)
 		res[i++] = '-';
-	}
-	while (count > i)
-	{
-		res[--count] = (tmp % 10) + '0';
-		tmp /= 10;
-	}
+	res[i] = '\0';
+	ft_rev_tab(res);
 	return (res);
 }

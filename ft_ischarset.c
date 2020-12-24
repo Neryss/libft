@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_ischarset.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/28 16:22:19 by ckurt             #+#    #+#             */
-/*   Updated: 2020/12/16 13:41:01 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2020/12/14 10:48:23 by ckurt             #+#    #+#             */
+/*   Updated: 2020/12/22 10:18:34 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_putstr(char *s)
+int	ft_ischarset(char c, const char *str)
 {
-	return (write(1, s, ft_strlen(s)));
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
 }
