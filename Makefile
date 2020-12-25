@@ -100,7 +100,9 @@ SRCS = ft_memset.c \
 		ft_atoi_base.c \
 		ft_ischarset.c \
 		ft_itoa_base_signed.c \
-		ft_nblen.c
+		ft_nblen.c \
+		get_next_line.c \
+		get_next_line_utils.c
 OBJS = $(SRCS:.c=.o)
 
 .c.o:
