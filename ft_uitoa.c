@@ -1,23 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstrl.c                                       :+:      :+:    :+:   */
+/*   ft_uitoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/19 16:06:25 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/04 13:00:55 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2020/12/26 21:49:04 by ckurt             #+#    #+#             */
+/*   Updated: 2020/12/29 20:46:25 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstrl(char *str, int len)
+static int		ft_itoa_getsize(unsigned n)
 {
-	int i;
+	int			count;
 
-	i = 0;
-	while (str[i] && i < len)
-		write(1, &str[i++], 1);
-	return (i);
+	count = 0;
+	while (n)
+	{
+		n /= 10;
+		count++;
+	}
+	return (count);
+}
+
+char			*ft_uitoa(unsigned int nb)
+{
+	char		*res;
+	long int	n;
+	int			count;
+
+	n = (long)nb;
+	count = ft_itoa_getsize(n);
+	if (count == 0)
+		count++;
+	if (!(res = ft_calloc(count + 1, sizeof(char))))
+		return (NULL);
+	while (count)
+	{
+		res[--count] = (n % 10) + '0';
+		n /= 10;
+	}
+	return (res);
 }

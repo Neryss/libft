@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstrl.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/19 16:06:25 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/04 13:00:55 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2020/11/25 16:50:11 by ckurt             #+#    #+#             */
+/*   Updated: 2020/11/25 17:16:27 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstrl(char *str, int len)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	int i;
-
-	i = 0;
-	while (str[i] && i < len)
-		write(1, &str[i++], 1);
-	return (i);
+	new->next = *lst;
+	*lst = new;
 }

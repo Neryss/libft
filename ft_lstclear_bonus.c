@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstrl.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/19 16:06:25 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/04 13:00:55 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2020/11/26 09:59:04 by ckurt             #+#    #+#             */
+/*   Updated: 2020/11/26 10:32:19 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstrl(char *str, int len)
+void		ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int i;
+	t_list	*temp;
 
-	i = 0;
-	while (str[i] && i < len)
-		write(1, &str[i++], 1);
-	return (i);
+	if (*lst)
+	{
+		while (*lst)
+		{
+			temp = (*lst)->next;
+			del((*lst)->content);
+			free(*lst);
+			*lst = temp;
+		}
+	}
 }

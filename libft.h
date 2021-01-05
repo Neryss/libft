@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2020/12/22 12:03:12 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/01/04 14:20:06 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
 
 typedef struct		s_list
 {
@@ -38,17 +37,18 @@ char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_convert_base(char *nbr, char *base_from, char *base_to);
-void				*ft_memset(void *str, int c, size_t len);
-void				*ft_memcpy(void *dst, const void *src, size_t n);
-void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
-void				*ft_memmove(void *dst, const void *src, size_t len);
-void				*ft_memchr(const void *s, int c, size_t n);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_putnbr_base(int nb, char *base);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(size_t n, char *base);
 char				*ft_itoa_base_signed(long long n, char *base);
+char				*ft_uitoa(unsigned int nb);
 
+void				*ft_memset(void *str, int c, size_t len);
+void				*ft_memcpy(void *dst, const void *src, size_t n);
+void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void				*ft_memmove(void *dst, const void *src, size_t len);
+void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 void				*ft_freeall(char **tab, int size);
 void				ft_putendl_fd(char *s, int fd);
