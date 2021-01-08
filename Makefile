@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2021/01/04 11:51:56 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2021/01/08 13:15:27 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -112,15 +112,20 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(LIBC) $(NAME) $(OBJS)
+	@cp $(NAME) ./ft_printf/libftprintf.a
+	@$(MAKE) -C ./ft_printf
 	@printf " $(_GREEN)=>$(_END) Fwinished uwu!\n"
 
 re: fclean
 	@$(MAKE) all
 
 clean:
+	@$(MAKE) clean -C ./ft_printf
 	@rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
+	@$(MAKE) fclean -C ./ft_printf
 	@rm -f $(NAME)
+	@rm -f $(libft.a)
 
 .PHONY: clean fclean re all
