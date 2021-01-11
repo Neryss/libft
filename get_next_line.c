@@ -6,13 +6,33 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 11:06:22 by ckurt             #+#    #+#             */
-/*   Updated: 2020/12/07 20:33:36 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/01/11 12:19:31 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include "libft.h"
 
-char	*fetch_line(char *str)
+char	*ft_free_strjoin(char *s1, char *s2)
+{
+	size_t	lens1;
+	size_t	lens2;
+	char	*res;
+
+	if (!s1 && !s2)
+		return (NULL);
+	lens1 = ft_strlen(s1);
+	lens2 = ft_strlen(s2);
+	if (!(res = malloc(sizeof(char) * (lens1 + lens2 + 1))))
+		return (NULL);
+	ft_memmove(res, s1, lens1);
+	ft_memmove(res + lens1, s2, lens2);
+	res[lens1 + lens2] = 0;
+	free(s1);
+	return (res);
+}
+
+static char	*fetch_line(char *str)
 {
 	int		i;
 	char	*res;
@@ -34,7 +54,7 @@ char	*fetch_line(char *str)
 	return (res);
 }
 
-char	*fetch_save(char *save)
+static char	*fetch_save(char *save)
 {
 	char	*res;
 	int		i;
@@ -71,7 +91,7 @@ int		get_next_line(int fd, char **line)
 	if (fd < 0 || !line || BUFFER_SIZE < 1 ||
 		!(buffer = malloc(sizeof(char) * (BUFFER_SIZE + 1))))
 		return (-1);
-	while (readvalue != 0 && !ft_strchr(save[fd], 10))
+	while (readvalue != 0 && !ft_is_in_str(save[fd], 10))
 	{
 		if ((readvalue = read(fd, buffer, BUFFER_SIZE)) == -1)
 		{
@@ -79,7 +99,7 @@ int		get_next_line(int fd, char **line)
 			return (-1);
 		}
 		buffer[readvalue] = 0;
-		save[fd] = ft_strjoin(save[fd], buffer);
+		save[fd] = ft_free_strjoin(save[fd], buffer);
 	}
 	free(buffer);
 	*line = fetch_line(save[fd]);

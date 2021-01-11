@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/12 17:39:37 by ckurt             #+#    #+#              #
-#    Updated: 2021/01/08 13:15:12 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2021/01/11 13:47:13 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,7 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
+	@cp ../libft.a libftprintf.a
 	@$(LIBC) $(NAME) $(OBJS)
 	@cp $(NAME) ../libft.a
 

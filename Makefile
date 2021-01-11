@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2021/01/08 13:15:27 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2021/01/11 12:37:07 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -101,7 +101,9 @@ SRCS = ft_memset.c \
 		ft_ischarset.c \
 		ft_itoa_base_signed.c \
 		ft_uitoa.c \
-		ft_nblen.c
+		ft_nblen.c \
+		get_next_line.c \
+		ft_is_in_str.c
 OBJS = $(SRCS:.c=.o)
 
 .c.o:
@@ -112,7 +114,6 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(LIBC) $(NAME) $(OBJS)
-	@cp $(NAME) ./ft_printf/libftprintf.a
 	@$(MAKE) -C ./ft_printf
 	@printf " $(_GREEN)=>$(_END) Fwinished uwu!\n"
 
