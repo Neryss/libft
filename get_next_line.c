@@ -6,17 +6,17 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 11:06:22 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/13 12:48:22 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/01/13 17:36:25 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_free_strjoin(char *s1, char *s2)
+char			*ft_free_strjoin(char *s1, char *s2)
 {
-	size_t	lens1;
-	size_t	lens2;
-	char	*res;
+	size_t		lens1;
+	size_t		lens2;
+	char		*res;
 
 	if (!s1 && !s2)
 		return (NULL);
@@ -31,10 +31,10 @@ char	*ft_free_strjoin(char *s1, char *s2)
 	return (res);
 }
 
-static char	*fetch_line(char *str)
+static char		*fetch_line(char *str)
 {
-	int		i;
-	char	*res;
+	int			i;
+	char		*res;
 
 	i = 0;
 	if (!str)
@@ -53,11 +53,11 @@ static char	*fetch_line(char *str)
 	return (res);
 }
 
-static char	*fetch_save(char *save)
+static char		*fetch_save(char *save)
 {
-	char	*res;
-	int		i;
-	int		j;
+	char		*res;
+	int			i;
+	int			j;
 
 	i = 0;
 	j = 0;
@@ -80,7 +80,7 @@ static char	*fetch_save(char *save)
 	return (res);
 }
 
-int		get_next_line(int fd, char **line)
+int				get_next_line(int fd, char **line)
 {
 	char		*buffer;
 	static char	*save[10240];

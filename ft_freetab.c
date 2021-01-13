@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 15:56:10 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/13 16:19:08 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/01/13 17:36:50 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_freetab(char **tab)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (tab[i])
