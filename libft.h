@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/11 10:45:57 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/01/13 12:48:00 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-#include "ft_printf/includes/ft_printf.h"
+# include "ft_printf/includes/ft_printf.h"
+# define BUFFER_SIZE 32
 
 typedef struct		s_list
 {
@@ -44,6 +45,7 @@ char				*ft_itoa(int n);
 char				*ft_itoa_base(size_t n, char *base);
 char				*ft_itoa_base_signed(long long n, char *base);
 char				*ft_uitoa(unsigned int nb);
+char				*ft_free_strjoin(char *s1, char *s2);
 
 void				*ft_memset(void *str, int c, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
@@ -89,6 +91,8 @@ int					ft_tolower(int c);
 int					ft_atoi(const char *str);
 int					ft_check_white_spaces(char *str, int i);
 int					ft_ischarset(char c, const char *str);
+int					get_next_line(int fd, char **line);
+
 
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *s);

@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_freeall.c                                       :+:      :+:    :+:   */
+/*   ft_gnl_to_array.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 10:04:54 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/13 14:54:23 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2021/01/11 16:46:24 by ckurt             #+#    #+#             */
+/*   Updated: 2021/01/11 17:13:25 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "get_next_line.h"
 
-void	*ft_freeall(char **tab, int size)
+char		**ft_gnl_to_array(char **line, int fd)
 {
-	int i;
+	char	**tab;
+	char	*line;
+	int		ret;
 
-	i = 0;
-	while (i < size)
-		free(tab[i++]);
-	free(tab);
-	return (NULL);
+	ret = 1;
+	while (ret)
+	{
+		
+	}
 }

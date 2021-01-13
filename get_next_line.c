@@ -6,11 +6,10 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 11:06:22 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/11 12:19:31 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/01/13 12:48:22 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
 #include "libft.h"
 
 char	*ft_free_strjoin(char *s1, char *s2)
