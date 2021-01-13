@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/13 12:48:00 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/01/13 15:57:38 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ char				*ft_itoa_base(size_t n, char *base);
 char				*ft_itoa_base_signed(long long n, char *base);
 char				*ft_uitoa(unsigned int nb);
 char				*ft_free_strjoin(char *s1, char *s2);
+char				**ft_read_file(int fd);
 
 void				*ft_memset(void *str, int c, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
@@ -54,6 +55,7 @@ void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 void				*ft_freeall(char **tab, int size);
+void				*ft_freetab(char **tab);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putendl(char *s);
 void				ft_putnbr_fd(int n, int fd);

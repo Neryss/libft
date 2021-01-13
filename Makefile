@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2021/01/11 12:37:07 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2021/01/13 15:57:50 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -103,7 +103,8 @@ SRCS = ft_memset.c \
 		ft_uitoa.c \
 		ft_nblen.c \
 		get_next_line.c \
-		ft_is_in_str.c
+		ft_is_in_str.c \
+		ft_freetab.c
 OBJS = $(SRCS:.c=.o)
 
 .c.o:
