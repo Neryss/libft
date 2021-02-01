@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2021/01/13 15:57:50 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2021/01/26 15:49:25 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,7 +104,14 @@ SRCS = ft_memset.c \
 		ft_nblen.c \
 		get_next_line.c \
 		ft_is_in_str.c \
-		ft_freetab.c
+		ft_freetab.c \
+		ft_read_file.c \
+		ft_iswhitespace.c \
+		ft_atof.c \
+		ft_math_power.c \
+		ft_startwith.c \
+		ft_endwith.c \
+		ft_skipuntilc.c
 OBJS = $(SRCS:.c=.o)
 
 .c.o:

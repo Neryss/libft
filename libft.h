@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/13 17:37:53 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/01 12:39:09 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,13 @@ typedef struct		s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+typedef	struct	s_rgb
+{
+	int			r;
+	int			g;
+	int			b;
+}				t_rgb;
 
 char				**ft_split(char const *s, char c);
 char				**ft_split_charset(char *str, char *charset);
@@ -69,6 +76,7 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 void				ft_foreach(int *tab, int length, void (*f)(int));
 void				ft_swap(char *a, char *b);
 void				ft_rev_tab(char *tab);
+void				check_args(int argc, char **argv);
 
 int					ft_putchar(char c);
 int					ft_putstr_fd(char *s, int fd);
@@ -81,6 +89,8 @@ int					ft_is_in_str(const char *s, int c);
 int					ft_check_base(char *base);
 int					ft_int_from_base(char c, char *base);
 int					ft_atoi_base(char *str, char *base);
+int					ft_atoi_len(char *str);
+int					ft_atof_len(char *str);
 int					ft_lstsize(t_list *lst);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_isalpha(int c);
@@ -88,12 +98,19 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
+int					ft_iswhitespace(char c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_atoi(const char *str);
 int					ft_check_white_spaces(char *str, int i);
 int					ft_ischarset(char c, const char *str);
 int					get_next_line(int fd, char **line);
+int					ft_endwith(char *str, char *end);
+int					ft_startwith(char *str, char *start);
+int					ft_skipuntilc(char *str, char c);
+long long			ft_math_power(long long nb, long long power);
+double				ft_atof(char *str);
+
 
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *s);
