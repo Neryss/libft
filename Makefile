@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2021/01/26 15:49:25 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2021/02/04 12:19:41 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ _ICYAN=\033[46m
 _IWHITE=\033[47m
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -O3 -g3
 INCS = libft.h
 LIBC = ar rcs
 NAME = libft.a
@@ -111,7 +111,8 @@ SRCS = ft_memset.c \
 		ft_math_power.c \
 		ft_startwith.c \
 		ft_endwith.c \
-		ft_skipuntilc.c
+		ft_skipuntilc.c \
+		ft_strcmp.c
 OBJS = $(SRCS:.c=.o)
 
 .c.o:

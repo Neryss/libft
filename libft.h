@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/01 12:39:09 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/01 13:27:58 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ int					get_next_line(int fd, char **line);
 int					ft_endwith(char *str, char *end);
 int					ft_startwith(char *str, char *start);
 int					ft_skipuntilc(char *str, char c);
+int					ft_strcmp(char *s1, char *s2);
 long long			ft_math_power(long long nb, long long power);
 double				ft_atof(char *str);
 
