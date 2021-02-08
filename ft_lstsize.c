@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 17:01:56 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/30 17:44:35 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 11:03:09 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (lst != NULL)

@@ -6,16 +6,16 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 13:14:59 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/04 13:11:10 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 10:53:54 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_check_base(char *base)
+int	ft_check_base(char *base)
 {
-	int		i;
-	int		j;
+	int	i;
+	int	j;
 
 	i = -1;
 	j = 1;
@@ -24,8 +24,8 @@ int			ft_check_base(char *base)
 	while (base[++i])
 	{
 		if (base[i] == '+' || base[i] == '-' || base[i] == '\r'
-				|| base[i] == '\v' || base[i] == '\t' || base[i] == '\f'
-				|| base[i] == ' ')
+			|| base[i] == '\v' || base[i] == '\t' || base[i] == '\f'
+			|| base[i] == ' ')
 			return (0);
 		while (base[i + j] != '\0')
 			if (base[i] == base[i + j++])
@@ -37,7 +37,7 @@ int			ft_check_base(char *base)
 
 static	int	ft_itoa_getsize_base(size_t n, int base_len)
 {
-	int		count;
+	int	count;
 
 	count = 0;
 	while (n)
@@ -50,7 +50,7 @@ static	int	ft_itoa_getsize_base(size_t n, int base_len)
 	return (count);
 }
 
-char		*ft_itoa_base(size_t n, char *base)
+char	*ft_itoa_base(size_t n, char *base)
 {
 	int		count;
 	int		base_len;
@@ -58,7 +58,8 @@ char		*ft_itoa_base(size_t n, char *base)
 
 	base_len = ft_strlen(base);
 	count = ft_itoa_getsize_base(n, base_len);
-	if (!(res = ft_calloc(count + 1, sizeof(char))))
+	res = ft_calloc(count + 1, sizeof(char));
+	if (!res)
 		return (NULL);
 	if (n == 0)
 	{

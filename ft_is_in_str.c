@@ -6,15 +6,15 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/13 17:37:10 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/13 17:37:23 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 10:47:30 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_is_in_str(const char *s, int c)
+int	ft_is_in_str(const char *s, int c)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	if (!s)

@@ -6,13 +6,13 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 11:13:04 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/24 10:26:39 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 11:03:45 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void				*ft_memset(void *b, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	int				i;
 	unsigned char	*bstr;

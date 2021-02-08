@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/12 13:02:59 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/08 12:47:04 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 11:04:55 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # define LOW_X "0123456789abcdef"
 # define UPP_X "0123456789ABCDEF"
 
-typedef	struct	s_element
+typedef struct s_element
 {
 	int			left_justify;
 	int			zero;
@@ -30,7 +30,7 @@ typedef	struct	s_element
 	int			dot_size;
 	char		type;
 	int			star;
-}				t_element;
+}	t_element;
 
 int				ft_printf(const char *str, ...);
 int				print_width(t_element *elem, int len);

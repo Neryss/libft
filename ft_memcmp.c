@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 10:04:28 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/24 14:05:01 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 11:03:29 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *us1;
-	unsigned char *us2;
-	unsigned long i;
+	unsigned char	*us1;
+	unsigned char	*us2;
+	unsigned long	i;
 
 	us1 = (unsigned char *)s1;
 	us2 = (unsigned char *)s2;

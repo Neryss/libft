@@ -6,13 +6,13 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 14:50:40 by ckurt             #+#    #+#             */
-/*   Updated: 2020/12/21 13:57:15 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 10:52:15 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_itoa_getsize(int n)
+static int	ft_itoa_getsize(int n)
 {
 	int			count;
 
@@ -27,7 +27,7 @@ static int		ft_itoa_getsize(int n)
 	return (count);
 }
 
-char			*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char		*res;
 	int			count;
@@ -38,7 +38,8 @@ char			*ft_itoa(int n)
 	count = ft_itoa_getsize(n);
 	if (tmp < 0 || count == 0)
 		count++;
-	if (!(res = ft_calloc(count + 1, sizeof(char))))
+	res = ft_calloc(count + 1, sizeof(char));
+	if (!res)
 		return (NULL);
 	i = 0;
 	if (tmp < 0)

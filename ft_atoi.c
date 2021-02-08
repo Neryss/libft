@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 15:02:55 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/21 15:57:16 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 10:41:31 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@ static int	calcul_res(int res, int neg, int pos)
 		return (0);
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
-	int		i;
-	int		neg;
-	int		pos;
-	int		res;
+	int	i;
+	int	neg;
+	int	pos;
+	int	res;
 
 	neg = 0;
 	pos = 0;

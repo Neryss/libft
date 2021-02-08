@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 17:43:17 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/30 17:43:19 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 10:55:04 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list *flink;
+	t_list	*flink;
 
 	flink = *lst;
 	if (!*lst)

@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 17:43:57 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/30 17:43:58 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 11:01:07 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (lst)
+	{
 		while (lst != NULL)
 		{
 			f(lst->content);
 			lst = lst->next;
 		}
+	}
 }

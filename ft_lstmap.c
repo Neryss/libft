@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 10:45:33 by ckurt             #+#    #+#             */
-/*   Updated: 2020/12/03 09:15:22 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 10:58:13 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,17 @@ static t_list	*ft_lstmap_lstnew(void *content)
 {
 	t_list		*list;
 
-	if (!(list = malloc(sizeof(t_list))))
+	list = malloc(sizeof(t_list));
+	if (!list)
 		return (NULL);
 	list->content = content;
 	list->next = NULL;
 	return (list);
 }
 
-static void		ft_lstmap_lstclear(t_list **lst, void (*del)(void *))
+static void	ft_lstmap_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list		*temp;
+	t_list	*temp;
 
 	if (*lst)
 	{
@@ -39,12 +40,13 @@ static void		ft_lstmap_lstclear(t_list **lst, void (*del)(void *))
 	}
 }
 
-t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list		*res;
-	t_list		*first;
+	t_list	*res;
+	t_list	*first;
 
-	if (!lst || !(res = ft_lstmap_lstnew(lst->content)))
+	res = ft_lstmap_lstnew(lst->content);
+	if (!lst || !(res))
 	{
 		ft_lstmap_lstclear(&lst, del);
 		return (NULL);
@@ -54,7 +56,8 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		res->content = f(lst->content);
 		lst = lst->next;
-		if (!(res->next = ft_lstmap_lstnew(f(lst->content))))
+		res->next = ft_lstmap_lstnew(f(lst->content));
+		if (!res->next)
 		{
 			ft_lstmap_lstclear(&first, del);
 			return (NULL);

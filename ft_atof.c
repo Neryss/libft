@@ -6,15 +6,15 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:44:10 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/26 15:29:04 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 10:41:22 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				ft_atoi_len(char *str)
+int	ft_atoi_len(char *str)
 {
-	int			i;
+	int	i;
 
 	i = 0;
 	while (ft_iswhitespace(str[i]) || str[i] == '-')
@@ -24,9 +24,9 @@ int				ft_atoi_len(char *str)
 	return (i);
 }
 
-int				ft_atof_len(char *str)
+int	ft_atof_len(char *str)
 {
-	int			len;
+	int	len;
 
 	len = ft_atoi_len(str);
 	str += len;
@@ -36,10 +36,10 @@ int				ft_atof_len(char *str)
 	return (len);
 }
 
-double			ft_atof(char *str)
+double	ft_atof(char *str)
 {
-	double		ent;
-	double		dec;
+	double	ent;
+	double	dec;
 
 	ent = ft_atoi(str);
 	str += ft_atoi_len(str);

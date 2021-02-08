@@ -6,17 +6,17 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/15 17:27:20 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/04 11:13:37 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 10:42:16 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_atoi_base(char *str, char *base)
+int	ft_atoi_base(char *str, char *base)
 {
-	int		res;
-	int		i;
-	int		neg;
+	int	res;
+	int	i;
+	int	neg;
 
 	res = 0;
 	i = 0;
@@ -24,7 +24,7 @@ int			ft_atoi_base(char *str, char *base)
 	if (!ft_check_base(base))
 		return (0);
 	while (str[i] == '\r' || str[i] == '\v' || str[i] == '\t'
-			|| str[i] == '\f' || str[i] == '\n' || str[i] == ' ')
+		|| str[i] == '\f' || str[i] == '\n' || str[i] == ' ')
 		i++;
 	while (str[i] == '-' || str[i] == '+')
 		if (str[i++] == '-')

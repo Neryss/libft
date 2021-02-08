@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 10:04:54 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/13 14:54:23 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 10:46:09 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_freeall(char **tab, int size)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < size)
