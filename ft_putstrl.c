@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/19 16:06:25 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/04 13:00:55 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 11:14:52 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putstrl(char *str, int len)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] && i < len)

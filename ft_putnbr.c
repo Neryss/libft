@@ -6,13 +6,13 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 16:32:22 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/28 16:33:46 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 11:07:36 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
 	long long	nb;
 

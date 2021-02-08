@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2021/02/04 12:19:41 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2021/02/08 11:11:42 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -123,7 +123,6 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(LIBC) $(NAME) $(OBJS)
-	@$(MAKE) -C ./ft_printf
 	@printf " $(_GREEN)=>$(_END) Fwinished uwu!\n"
 
 re: fclean
