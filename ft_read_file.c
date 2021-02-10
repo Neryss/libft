@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 10:12:00 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/08 11:31:56 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 15:51:06 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,14 @@ static char	*ft_strjoinc(char *s1, char c)
 	i = 0;
 	if (!s1)
 	{
-		ret = malloc(sizeof(char) * 2);
-		if (!ret)
+		if (!(ft_malloc(&ret, sizeof(char) * 2)))
 			return (0);
 		ret[0] = c;
 		ret[1] = 0;
 		return (ret);
 	}
 	tlen = ft_strlen(s1) + 1;
-	ret = malloc(sizeof(char) * (tlen + 1));
-	if (!ret)
+	if (!(ret = malloc(sizeof(char) * (tlen + 1))))
 		return (0);
 	while (s1[i])
 	{
@@ -52,8 +50,7 @@ static int	ft_gnl(int fd, char **line)
 	ret = 0;
 	if (!line)
 		return (-1);
-	*line = malloc(sizeof(char) * 1);
-	if (!*line)
+	if (!(*line = malloc(sizeof(char) * 1)))
 		return (-1);
 	*line[0] = 0;
 	while ((readvalue = read(fd, &buffer, 1)) && buffer != '\n')

@@ -6,19 +6,19 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/15 17:26:51 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/08 10:45:50 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/10 11:09:56 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_swap(char *a, char *b)
+void	ft_swap(void *a, void *b)
 {
-	char	tmp;
+	void	*tmp;
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+	tmp = a;
+	a = b;
+	b = tmp;
 }
 
 void	ft_rev_tab(char *tab)

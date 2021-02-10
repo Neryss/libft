@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_malloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 13:27:28 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/08 16:08:21 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2021/02/08 15:36:00 by ckurt             #+#    #+#             */
+/*   Updated: 2021/02/09 10:00:03 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(char *s1, char *s2)
+void	*ft_malloc(char **ret, size_t size)
 {
-	int	i;
-
-	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i])
-		i++;
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	*ret = malloc(size);
+	return (*ret);
 }

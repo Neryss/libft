@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 15:53:08 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/27 10:16:14 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 16:06:32 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		i;
 
 	i = 0;
-	if (!(res = ft_calloc(ft_strlen(s) + 1, sizeof(char))))
+	res = ft_calloc(ft_strlen(s) + 1, sizeof(char));
+	if (!res)
 		return (0);
 	while (s[i])
 	{

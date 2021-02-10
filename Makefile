@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2021/02/08 11:11:42 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2021/02/09 10:50:08 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -102,7 +102,6 @@ SRCS = ft_memset.c \
 		ft_itoa_base_signed.c \
 		ft_uitoa.c \
 		ft_nblen.c \
-		get_next_line.c \
 		ft_is_in_str.c \
 		ft_freetab.c \
 		ft_read_file.c \
@@ -112,7 +111,9 @@ SRCS = ft_memset.c \
 		ft_startwith.c \
 		ft_endwith.c \
 		ft_skipuntilc.c \
-		ft_strcmp.c
+		ft_strcmp.c \
+		ft_rgbtohex.c \
+		ft_malloc.c 
 OBJS = $(SRCS:.c=.o)
 
 .c.o:
@@ -129,11 +130,9 @@ re: fclean
 	@$(MAKE) all
 
 clean:
-	@$(MAKE) clean -C ./ft_printf
 	@rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-	@$(MAKE) fclean -C ./ft_printf
 	@rm -f $(NAME)
 	@rm -f $(libft.a)
 

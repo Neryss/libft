@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 15:01:04 by ckurt             #+#    #+#             */
-/*   Updated: 2020/12/22 10:20:28 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 16:11:35 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	is_char_in_str(char c, char *str)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (str[i])
@@ -28,9 +28,9 @@ static int	is_char_in_str(char c, char *str)
 
 static int	count_words(char *str, char *charset)
 {
-	int		i;
-	int		word;
-	int		check;
+	int	i;
+	int	word;
+	int	check;
 
 	i = 0;
 	word = 0;
@@ -51,7 +51,7 @@ static int	count_words(char *str, char *charset)
 
 static int	get_word_length(char *str, char *charset, int index)
 {
-	int		l;
+	int	l;
 
 	l = 0;
 	while (str[index] && !is_char_in_str(str[index], charset))
@@ -62,7 +62,7 @@ static int	get_word_length(char *str, char *charset, int index)
 	return (l);
 }
 
-char		**ft_split_charset(char *str, char *charset)
+char	**ft_split_charset(char *str, char *charset)
 {
 	int		word_count;
 	int		i;

@@ -6,19 +6,20 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 15:01:18 by ckurt             #+#    #+#             */
-/*   Updated: 2021/01/11 12:14:56 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 16:07:44 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char			*fstr;
-	int				tlen;
+	char	*fstr;
+	int		tlen;
 
 	tlen = ft_strlen(s1) + ft_strlen(s2);
-	if (!(fstr = ft_calloc(tlen + 1, sizeof(char))))
+	fstr = ft_calloc(tlen + 1, sizeof(char));
+	if (!fstr)
 		return (NULL);
 	fstr = ft_memcpy(fstr, s1, ft_strlen(s1));
 	fstr = ft_strcat(fstr, (char *)s2);

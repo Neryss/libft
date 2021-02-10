@@ -6,13 +6,13 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/25 12:10:11 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/25 15:52:15 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 16:04:36 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		get_trimmed_len(char const *s1, char const *set)
+static int	get_trimmed_len(char const *s1, char const *set)
 {
 	int			i;
 	int			j;
@@ -35,7 +35,7 @@ static int		get_trimmed_len(char const *s1, char const *set)
 	return (tlen);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int			tlen;
 	int			i;
@@ -45,7 +45,8 @@ char			*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	j = 0;
 	tlen = get_trimmed_len(s1, set);
-	if (!(tstr = malloc(sizeof(char) * (tlen + 1))))
+	tstr = malloc(sizeof(char) * (tlen + 1));
+	if (!tstr)
 		return (0);
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;

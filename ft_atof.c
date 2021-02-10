@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:44:10 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/08 10:41:22 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/10 15:38:25 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ double	ft_atof(char *str)
 		return (ent);
 	dec = ft_atoi(++str);
 	dec /= ft_math_power(10, ft_nblen(dec));
-	return (ent + dec);
+	if (ent >= 0)
+		return (ent + dec);
+	return (ent - dec);
 }

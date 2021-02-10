@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/08 11:11:47 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/10 11:10:22 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,15 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# define BUFFER_SIZE 32
+# include <stdio.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }					t_list;
 
-typedef	struct	s_rgb
+typedef struct s_rgb
 {
 	int			r;
 	int			g;
@@ -35,8 +35,8 @@ char				**ft_split(char const *s, char c);
 char				**ft_split_charset(char *str, char *charset);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
-char				*ft_strnstr(const char *haystack,
-const char *needle, size_t len);
+char				*ft_strnstr(const char *haystack
+, const char *needle, size_t len);
 char				*ft_strcat(char *dest, char *src);
 char				*ft_strncat(char *dest, char *src, unsigned int nb);
 char				*ft_strdup(const char *s1);
@@ -62,6 +62,7 @@ void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_calloc(size_t count, size_t size);
 void				*ft_freeall(char **tab, int size);
 void				*ft_freetab(char **tab);
+void				*ft_malloc(char **ret, size_t size);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putendl(char *s);
 void				ft_putnbr_fd(int n, int fd);
@@ -73,7 +74,7 @@ void				ft_lstdelone(t_list *lst, void (*del)(void*));
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 void				ft_foreach(int *tab, int length, void (*f)(int));
-void				ft_swap(char *a, char *b);
+void				ft_swap(void *a, void *b);
 void				ft_rev_tab(char *tab);
 void				check_args(int argc, char **argv);
 
@@ -110,7 +111,7 @@ int					ft_skipuntilc(char *str, char c);
 int					ft_strcmp(char *s1, char *s2);
 long long			ft_math_power(long long nb, long long power);
 double				ft_atof(char *str);
-
+unsigned long		ft_rgbtohex(int r, int g, int b);
 
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *s);
@@ -119,7 +120,7 @@ size_t				ft_nblen(int n);
 
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstlast(t_list *lst);
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
-void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *)
+, void (*del)(void *));
 
 #endif

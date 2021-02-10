@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 10:29:25 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/26 13:56:55 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 16:06:42 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t len;
-	size_t i;
+	size_t	len;
+	size_t	i;
 
 	if (!dst && !src)
 		return (0);

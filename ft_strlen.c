@@ -6,13 +6,13 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 10:24:31 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/04 13:29:21 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 16:06:55 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	const char	*str;
 

@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 15:25:24 by ckurt             #+#    #+#             */
-/*   Updated: 2020/11/24 15:28:53 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/08 16:08:08 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ char	*ft_strdup(const char *s1)
 
 	i = 0;
 	len = ft_strlen(s1);
-	if (!(str = malloc((sizeof(char) * (len + 1)))))
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
 		return (0);
 	while (i < len)
 	{
