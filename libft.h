@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/10 11:10:22 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/15 11:32:07 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdbool.h>
 # include <stdio.h>
 
 typedef struct s_list

@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/28 15:01:04 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/08 16:11:35 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/15 11:35:51 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,15 +73,15 @@ char	**ft_split_charset(char *str, char *charset)
 	i = 0;
 	k = 0;
 	word_count = count_words(str, charset);
-	if (!(tab = (char **)malloc(sizeof(char *) * word_count + 1)))
+	tab = malloc(sizeof(char **) * word_count + 1);
+	if (!tab)
 		return (0);
 	while (k < word_count)
 	{
 		j = 0;
 		while (is_char_in_str(str[i], charset))
 			i++;
-		if (!(tab[k] = (char *)malloc(sizeof(char) *
-			(get_word_length(str, charset, i) + 1))))
+		if (!ft_malloc(&tab[k], get_word_length(str, charset, i) + 1))
 			return (ft_freeall(tab, k));
 		while (str[i] && !(is_char_in_str(str[i], charset)))
 			tab[k][j++] = str[i++];

@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 10:12:00 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/08 15:51:06 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/15 11:37:13 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static char	*ft_strjoinc(char *s1, char c)
 		return (ret);
 	}
 	tlen = ft_strlen(s1) + 1;
-	if (!(ret = malloc(sizeof(char) * (tlen + 1))))
+	if (!ft_malloc(&ret, tlen + 1))
 		return (0);
 	while (s1[i])
 	{
@@ -41,6 +41,12 @@ static char	*ft_strjoinc(char *s1, char c)
 	return (ret);
 }
 
+static bool	trash_read(int fd, char *buffer, int *readvalue)
+{
+	*readvalue = read(fd, buffer, 1);
+	return (*readvalue != 0);
+}
+
 static int	ft_gnl(int fd, char **line)
 {
 	char	buffer;
@@ -50,10 +56,10 @@ static int	ft_gnl(int fd, char **line)
 	ret = 0;
 	if (!line)
 		return (-1);
-	if (!(*line = malloc(sizeof(char) * 1)))
+	if (!ft_malloc(line, sizeof(char) * 1))
 		return (-1);
 	*line[0] = 0;
-	while ((readvalue = read(fd, &buffer, 1)) && buffer != '\n')
+	while (trash_read(fd, &buffer, &readvalue) && buffer != '\n')
 		*line = ft_strjoinc(*line, buffer);
 	if (!*line)
 		*line = ft_strjoinc(*line, '\0');
@@ -82,7 +88,7 @@ static char	**add_line(char **src, char *line, int i)
 	return (new);
 }
 
-char		**ft_read_file(int fd)
+char	**ft_read_file(int fd)
 {
 	char	*line;
 	char	**file;
