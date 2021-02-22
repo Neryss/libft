@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2021/02/09 10:50:08 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2021/02/22 15:31:59 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -113,7 +113,8 @@ SRCS = ft_memset.c \
 		ft_skipuntilc.c \
 		ft_strcmp.c \
 		ft_rgbtohex.c \
-		ft_malloc.c 
+		ft_malloc.c \
+		ft_pow.c
 OBJS = $(SRCS:.c=.o)
 
 .c.o:

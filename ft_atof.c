@@ -6,13 +6,13 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/21 12:44:10 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/10 15:38:25 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/22 15:27:55 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi_len(char *str)
+size_t	ft_atoi_len(char *str)
 {
 	int	i;
 
@@ -40,14 +40,25 @@ double	ft_atof(char *str)
 {
 	double	ent;
 	double	dec;
+	size_t	i;
+	int		neg;
 
 	ent = ft_atoi(str);
+	neg = 0;
+	if (ent == 0)
+	{
+		i = 0;
+		while (str[i] && i < ft_atoi_len(str))
+			if (str[i++] == '-')
+				neg++;
+	}
 	str += ft_atoi_len(str);
 	if (*str != '.')
 		return (ent);
 	dec = ft_atoi(++str);
-	dec /= ft_math_power(10, ft_nblen(dec));
-	if (ent >= 0)
+	dec /= ft_pow(10, ft_nblen(dec));
+	if (ent < 0 || neg > 0)
+		return (ent - dec);
+	else
 		return (ent + dec);
-	return (ent - dec);
 }

@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/15 11:32:07 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/02/22 15:31:28 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ int					ft_is_in_str(const char *s, int c);
 int					ft_check_base(char *base);
 int					ft_int_from_base(char c, char *base);
 int					ft_atoi_base(char *str, char *base);
-int					ft_atoi_len(char *str);
+size_t				ft_atoi_len(char *str);
 int					ft_atof_len(char *str);
 int					ft_lstsize(t_list *lst);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -111,6 +111,7 @@ int					ft_startwith(char *str, char *start);
 int					ft_skipuntilc(char *str, char c);
 int					ft_strcmp(char *s1, char *s2);
 long long			ft_math_power(long long nb, long long power);
+long long	ft_pow(long long nb, long long n);
 double				ft_atof(char *str);
 unsigned long		ft_rgbtohex(int r, int g, int b);
 
