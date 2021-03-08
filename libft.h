@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/22 15:31:28 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/03/08 12:22:20 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ char				**ft_split(char const *s, char c);
 char				**ft_split_charset(char *str, char *charset);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
-char				*ft_strnstr(const char *haystack
-, const char *needle, size_t len);
+char				*ft_strnstr(const char *haystack,
+						const char *needle, size_t len);
 char				*ft_strcat(char *dest, char *src);
 char				*ft_strncat(char *dest, char *src, unsigned int nb);
 char				*ft_strdup(const char *s1);
@@ -54,7 +54,6 @@ char				*ft_itoa_base_signed(long long n, char *base);
 char				*ft_uitoa(unsigned int nb);
 char				*ft_free_strjoin(char *s1, char *s2);
 char				**ft_read_file(int fd);
-
 void				*ft_memset(void *str, int c, size_t len);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
 void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
@@ -78,7 +77,6 @@ void				ft_foreach(int *tab, int length, void (*f)(int));
 void				ft_swap(void *a, void *b);
 void				ft_rev_tab(char *tab);
 void				check_args(int argc, char **argv);
-
 int					ft_putchar(char c);
 int					ft_putstr_fd(char *s, int fd);
 int					ft_putchar_fd(char c, int fd);
@@ -111,18 +109,16 @@ int					ft_startwith(char *str, char *start);
 int					ft_skipuntilc(char *str, char c);
 int					ft_strcmp(char *s1, char *s2);
 long long			ft_math_power(long long nb, long long power);
-long long	ft_pow(long long nb, long long n);
+long long			ft_pow(long long nb, long long n);
 double				ft_atof(char *str);
 unsigned long		ft_rgbtohex(int r, int g, int b);
-
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *s);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_nblen(int n);
-
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstlast(t_list *lst);
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *)
-, void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
+						void (*del)(void *));
 
 #endif
