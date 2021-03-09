@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2021/03/08 10:57:23 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2021/03/09 13:10:56 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ _ICYAN=\033[46m
 _IWHITE=\033[47m
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -O3 -g -fsanitize=address -fno-builtin
+CFLAGS = -Wall -Wextra -Werror -O3 -fno-builtin
 INCS = libft.h
 LIBC = ar rcs
 NAME = libft.a

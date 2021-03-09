@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 10:12:00 by ckurt             #+#    #+#             */
-/*   Updated: 2021/02/15 11:37:13 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/03/09 12:55:37 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,8 @@ static char	**add_line(char **src, char *line, int i)
 		new[j] = ft_strdup(src[j]);
 		free(src[j++]);
 	}
-	free(src);
+	if (i)
+		free(src);
 	new[j++] = ft_strdup(line);
 	new[j] = NULL;
 	return (new);
