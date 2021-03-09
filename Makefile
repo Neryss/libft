@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2021/03/09 13:10:56 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2021/03/09 13:36:33 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -118,14 +118,14 @@ SRCS = ft_memset.c \
 OBJS = $(SRCS:.c=.o)
 
 .c.o:
-	@printf "$(_CYAN) [+] $(_END) Compiling $(_BLUE)owo $(_END)$<\n" | tr "lr" "w"
+	@printf "$(_PURPLE)[LIBFT] $(_END)$(_CYAN) [+]$(_END) Compiling $(_BLUE)owo$(_END) | $(_CYAN)$<$(_END)\n" | tr "lr" "w"
 	@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) 
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(LIBC) $(NAME) $(OBJS)
-	@printf " $(_GREEN)=>$(_END) Fwinished uwu!\n"
+	@printf "$(_GREEN)[LIBFT][DONE] $(_END) Fiwniwshed uwu\n"
 
 re: fclean
 	@$(MAKE) all
@@ -136,5 +136,6 @@ clean:
 fclean: clean
 	@rm -f $(NAME)
 	@rm -f $(libft.a)
+	@printf "$(_RED)[LIBFT]  [-]$(_RED) $(_UNDER)All cleaned up now uwu!\n$(_END)" | tr "lr" "w"
 
 .PHONY: clean fclean re all
