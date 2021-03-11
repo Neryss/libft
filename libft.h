@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2021/03/08 12:22:20 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/03/11 14:06:01 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ char				**ft_split(char const *s, char c);
 char				**ft_split_charset(char *str, char *charset);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
+
 char				*ft_strnstr(const char *haystack,
 						const char *needle, size_t len);
 char				*ft_strcat(char *dest, char *src);
@@ -118,6 +119,7 @@ size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_nblen(int n);
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstlast(t_list *lst);
+
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
 
