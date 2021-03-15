@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 10:12:00 by ckurt             #+#    #+#             */
-/*   Updated: 2021/03/09 12:55:37 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/03/15 12:12:08 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,8 @@ char	**ft_read_file(int fd)
 			return (NULL);
 		if (*line)
 			file = add_line(file, line, i++);
-		free(line);
+		else
+			free(line);
 		if (!file)
 			return (NULL);
 	}
