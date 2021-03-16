@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 10:12:00 by ckurt             #+#    #+#             */
-/*   Updated: 2021/03/15 12:12:08 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/03/15 16:44:37 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,10 +82,11 @@ static char	**add_line(char **src, char *line, int i)
 		new[j] = ft_strdup(src[j]);
 		free(src[j++]);
 	}
-	if (i)
-		free(src);
 	new[j++] = ft_strdup(line);
 	new[j] = NULL;
+	free(line);
+	if (i)
+		free(src);
 	return (new);
 }
 
@@ -101,7 +102,7 @@ char	**ft_read_file(int fd)
 	while (ret)
 	{
 		ret = ft_gnl(fd, &line);
-		if (ret == -1)
+		if (ret == -1 || (i == 0 && ret == 0))
 			return (NULL);
 		if (*line)
 			file = add_line(file, line, i++);
