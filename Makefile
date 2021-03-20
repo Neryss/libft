@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2021/03/15 12:58:40 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2021/03/20 11:27:50 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -115,7 +115,9 @@ SRCS = ft_memset.c \
 		ft_rgbtohex.c \
 		ft_malloc.c \
 		ft_pow.c \
-		ft_isinrange.c
+		ft_isinrange.c \
+		ft_minmax.c \
+		ft_clamp.c
 OBJS = $(SRCS:.c=.o)
 
 .c.o:
@@ -138,5 +140,11 @@ fclean: clean
 	@rm -f $(NAME)
 	@rm -f $(libft.a)
 	@printf "$(_RED)[LIBFT]  [-]$(_RED) $(_UNDER)All cleaned up now uwu!\n$(_END)" | tr "lr" "w"
+
+count:
+	@printf ".c files :"
+	@find . -type f -name "*.c" | wc -l
+	@printf ".o files :"
+	@find . -type f -name "*.o" | wc -l
 
 .PHONY: clean fclean re all

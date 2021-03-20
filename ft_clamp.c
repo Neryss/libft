@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isinrange.c                                     :+:      :+:    :+:   */
+/*   ft_clamp.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/15 09:56:51 by ckurt             #+#    #+#             */
-/*   Updated: 2021/03/20 11:14:22 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2021/03/20 11:15:31 by ckurt             #+#    #+#             */
+/*   Updated: 2021/03/20 11:18:07 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isinrange(long nb, long min, long max)
+int	ft_clamp(int value, int min, int max)
 {
-	if (nb < min || nb > max)
-		return (0);
-	return (1);
+	if (value < min)
+		return (min);
+	if (value > max)
+		return (max);
+	return (value);
 }

@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2021/03/15 10:03:20 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/03/20 11:22:05 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ size_t				ft_atoi_len(char *str);
 int					ft_atof_len(char *str);
 int					ft_lstsize(t_list *lst);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
-int					ft_isinrange(long nb, long min, long max);;
+int					ft_isinrange(long nb, long min, long max);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
@@ -102,6 +102,10 @@ int					ft_isprint(int c);
 int					ft_iswhitespace(char c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+double				ft_dmin(double a, double b);
+double				ft_dmax(double a, double b);
+int					imin(int a, int b);
+int					imax(int a, int b);
 int					ft_atoi(const char *str);
 int					ft_check_white_spaces(char *str, int i);
 int					ft_ischarset(char c, const char *str);

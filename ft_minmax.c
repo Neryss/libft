@@ -1,20 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isinrange.c                                     :+:      :+:    :+:   */
+/*   ft_minmax.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/15 09:56:51 by ckurt             #+#    #+#             */
-/*   Updated: 2021/03/20 11:14:22 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2021/03/20 11:19:36 by ckurt             #+#    #+#             */
+/*   Updated: 2021/03/20 11:20:03 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isinrange(long nb, long min, long max)
+int	imax(int a, int b)
 {
-	if (nb < min || nb > max)
-		return (0);
-	return (1);
+	if (a > b)
+		return (a);
+	return (b);
+}
+
+int	imin(int a, int b)
+{
+	if (a < b)
+		return (a);
+	return (b);
+}
+
+double	ft_dmax(double a, double b)
+{
+	if (a > b)
+		return (a);
+	else
+		return (b);
+}
+
+double	ft_dmin(double a, double b)
+{
+	if (a < b)
+		return (a);
+	else
+		return (b);
 }
