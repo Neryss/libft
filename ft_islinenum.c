@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/22 14:57:57 by ckurt             #+#    #+#             */
-/*   Updated: 2021/03/22 15:00:55 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/03/22 15:58:19 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_islinenum(char *str)
 {
 	while(*str)
 	{
-		if (!ft_isdigit(*str))
+		if (!ft_isdigit(*str) && *str != '-' && *str != '+')
 			return (0);
 		str++;
 	}
