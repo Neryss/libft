@@ -6,7 +6,7 @@
 #    By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/23 13:34:22 by ckurt             #+#    #+#              #
-#    Updated: 2021/03/20 11:27:50 by ckurt            ###   ########lyon.fr    #
+#    Updated: 2021/03/22 15:01:11 by ckurt            ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -117,7 +117,8 @@ SRCS = ft_memset.c \
 		ft_pow.c \
 		ft_isinrange.c \
 		ft_minmax.c \
-		ft_clamp.c
+		ft_clamp.c \
+		ft_islinenum.c
 OBJS = $(SRCS:.c=.o)
 
 .c.o:

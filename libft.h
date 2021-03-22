@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2021/03/20 11:22:05 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/03/22 15:00:59 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,7 @@ int					ft_endwith(char *str, char *end);
 int					ft_startwith(char *str, char *start);
 int					ft_skipuntilc(char *str, char c);
 int					ft_strcmp(char *s1, char *s2);
+int					ft_islinenum(char *str);
 long long			ft_math_power(long long nb, long long power);
 long long			ft_pow(long long nb, long long n);
 double				ft_atof(char *str);
