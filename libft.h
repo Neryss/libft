@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2021/03/22 15:00:59 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/03/23 14:51:11 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 void				ft_foreach(int *tab, int length, void (*f)(int));
 void				ft_swap(void *a, void *b);
 void				ft_rev_tab(char *tab);
-void				check_args(int argc, char **argv);
 int					ft_putchar(char c);
 int					ft_putstr_fd(char *s, int fd);
 int					ft_putchar_fd(char c, int fd);
