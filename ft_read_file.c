@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/14 10:12:00 by ckurt             #+#    #+#             */
-/*   Updated: 2021/03/20 11:12:12 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/03/24 11:11:14 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static bool	trash_read(int fd, char *buffer, int *readvalue)
 	return (*readvalue != 0);
 }
 
-static int	ft_gnl(int fd, char **line)
+int	ft_gnl(int fd, char **line)
 {
 	char	buffer;
 	int		ret;

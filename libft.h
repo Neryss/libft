@@ -6,7 +6,7 @@
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 13:49:05 by ckurt             #+#    #+#             */
-/*   Updated: 2021/03/23 14:51:11 by ckurt            ###   ########lyon.fr   */
+/*   Updated: 2021/03/24 12:59:09 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,7 @@ int					ft_isprint(int c);
 int					ft_iswhitespace(char c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+int					ft_gnl(int fd, char **line);
 double				ft_dmin(double a, double b);
 double				ft_dmax(double a, double b);
 int					imin(int a, int b);
@@ -112,7 +113,7 @@ int					get_next_line(int fd, char **line);
 int					ft_endwith(char *str, char *end);
 int					ft_startwith(char *str, char *start);
 int					ft_skipuntilc(char *str, char c);
-int					ft_strcmp(char *s1, char *s2);
+int					ft_strcmp(const char *s1,const char *s2);
 int					ft_islinenum(char *str);
 long long			ft_math_power(long long nb, long long power);
 long long			ft_pow(long long nb, long long n);
