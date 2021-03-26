@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckurt <ckurt@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/01 13:27:28 by ckurt             #+#    #+#             */
-/*   Updated: 2021/03/26 11:55:42 by ckurt            ###   ########lyon.fr   */
+/*   Created: 2021/03/26 11:36:31 by ckurt             #+#    #+#             */
+/*   Updated: 2021/03/26 11:54:59 by ckurt            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(const char *s1, const char *s2)
+void	ft_sort_int_tab(int *tab, int size)
 {
-	while (*s1 == *s2++)
-		if (*s1++ == 0)
-			return (0);
-	return (*(const unsigned char *)s1 - *(const unsigned char *)(s2 - 1));
+	int	i;
+	int	swap;
+
+	i = 0;
+	swap = 1;
+	while (swap)
+	{
+		swap = 0;
+		i = 0;
+		while (i < size - 1)
+		{
+			if (tab[i] > tab[i + 1])
+			{
+				ft_swap(&tab[i], &tab[i + 1]);
+				swap = 1;
+			}
+			i++;
+		}
+	}
 }
