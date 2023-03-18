@@ -18,6 +18,6 @@ int	ft_putstrl(char *str, int len)
 
 	i = 0;
 	while (str[i] && i < len)
-		write(1, &str[i++], 1);
+		i += write(1, &str[i], 1);
 	return (i);
 }

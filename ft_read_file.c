@@ -93,7 +93,7 @@ static char	**add_line(char **src, char *line, int i)
 char	**ft_read_file(int fd)
 {
 	char	*line;
-	char	**file;
+	char	**file = NULL;
 	int		i;
 	int		ret;
 
